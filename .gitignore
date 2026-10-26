@@ -1,0 +1,3 @@
+# Raw recordings can contain sensitive operational, account, or desktop context.
+source-videos/
+*.mp4

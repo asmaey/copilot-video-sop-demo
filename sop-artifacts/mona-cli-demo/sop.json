@@ -1,0 +1,136 @@
+{
+  "documentId": "mona-cli-demo",
+  "reference": "SOP-DEMO-001",
+  "version": "0.1",
+  "status": "Draft - process-owner review required",
+  "title": "Create a Mona webpage with Copilot CLI",
+  "subtitle": "From a terminal prompt to a generated webpage and a connected web session.",
+  "purpose": "Create a local animated HTML page using GitHub Copilot CLI, then access the same agent conversation through GitHub's web interface.",
+  "source": {
+    "name": "demo-ghc-cli.mp4",
+    "durationSeconds": 174.727,
+    "method": "Selected video frames; visible actions and on-screen text only. Audio has not been transcribed.",
+    "note": "This SOP documents the recorded demo, not a verified product-support statement. Timestamps identify sampled evidence, not exact action boundaries."
+  },
+  "prerequisites": [
+    "A Windows computer with GitHub Copilot CLI installed and authenticated. Installation and sign-in are not shown in the recording.",
+    "An approved local working folder where generating an HTML file is permitted.",
+    "A web browser and a GitHub account with the necessary Copilot access.",
+    "Permission to use remote session access under your organization's policies."
+  ],
+  "warnings": [
+    "The recording enables all tool permissions and uses the user's home folder. Do not treat these demo choices as recommended practice: use a dedicated folder and least-privilege approvals.",
+    "Inspect generated HTML before opening it. Generated code and assistant claims require human verification.",
+    "Screenshots contain account and desktop context. Review and redact them before sharing outside the approved audience.",
+    "The final animation and mobile-access behavior have not been exhaustively tested. No process-owner approval is recorded."
+  ],
+  "steps": [
+    {
+      "id": "trust",
+      "title": "Confirm the working folder",
+      "timestampSeconds": 4,
+      "frame": "frame-004.jpg",
+      "caption": "Copilot CLI displays the folder-trust prompt.",
+      "instruction": "Start Copilot CLI in your approved working folder. Review the displayed path and confirm trust only if you recognize and trust the folder.",
+      "expected": "The interactive Copilot CLI prompt becomes available.",
+      "caution": "The recording starts with Copilot already open; the exact launch command is not visible. Avoid trusting an unnecessarily broad folder.",
+      "evidence": "Observed prompt"
+    },
+    {
+      "id": "prompt",
+      "title": "Request the animated webpage",
+      "timestampSeconds": 33,
+      "frame": "frame-033.jpg",
+      "caption": "The natural-language request is submitted in the CLI.",
+      "instruction": "Enter the request below and allow Copilot to generate the HTML file, reviewing any requested permissions.",
+      "command": "create a static HTML web page, displaying an fun animation of Mona",
+      "expected": "Copilot begins creating a static page featuring Mona, GitHub's Octocat.",
+      "evidence": "Observed request"
+    },
+    {
+      "id": "generated-result",
+      "title": "Review the generated result",
+      "timestampSeconds": 63,
+      "frame": "frame-063.jpg",
+      "caption": "Copilot reports creating mona-animation.html and lists its features.",
+      "instruction": "Check that mona-animation.html has been created. Review the generated code and the assistant's description before opening the file.",
+      "expected": "The assistant lists floating motion, blinking eyes, animated tentacles, stars, bubbles, and click effects.",
+      "caution": "This screenshot establishes what Copilot reported, not that every animation or interaction works correctly.",
+      "evidence": "Assistant-reported result"
+    },
+    {
+      "id": "open",
+      "title": "Open the HTML page",
+      "timestampSeconds": 77,
+      "frame": "frame-077.jpg",
+      "caption": "Windows offers a browser selection for the generated HTML file.",
+      "instruction": "Ask Copilot to open the generated file using the command below. If Windows asks which application to use, choose an approved browser.",
+      "command": "start mona-animation.html",
+      "expected": "The local HTML file opens in the selected browser.",
+      "caution": "Choosing a browser once is sufficient; changing the system default is not required.",
+      "evidence": "Observed application chooser"
+    },
+    {
+      "id": "remote",
+      "title": "Enable remote session access",
+      "timestampSeconds": 112,
+      "frame": "frame-112.jpg",
+      "caption": "The CLI offers /remote on in its command suggestions.",
+      "instruction": "If remote access is allowed by your organization, return to the CLI and run /remote on.",
+      "command": "/remote on",
+      "expected": "Copilot establishes a remote connection and displays a session link.",
+      "caution": "This is an optional connectivity step, not a prerequisite for generating the local HTML page.",
+      "evidence": "Observed command selection"
+    },
+    {
+      "id": "link",
+      "title": "Open the connected session link",
+      "timestampSeconds": 117,
+      "frame": "frame-117.jpg",
+      "caption": "The CLI reports that remote control is connected and shows a GitHub session URL.",
+      "instruction": "Open the GitHub session URL provided by your own CLI session. Authenticate if required by your organization.",
+      "expected": "GitHub opens the conversation associated with the running CLI session.",
+      "caution": "Use your own generated URL, not the personal session address visible in this recording.",
+      "evidence": "Observed connection confirmation"
+    },
+    {
+      "id": "web",
+      "title": "Check conversation continuity on the web",
+      "timestampSeconds": 121,
+      "frame": "frame-121.jpg",
+      "caption": "GitHub displays the same request, generated-file summary, and open-file command.",
+      "instruction": "Confirm that the web conversation contains the CLI request and response. Look for the remote-mode indicator before continuing the conversation.",
+      "expected": "The CLI conversation is visible in the GitHub web interface, with remote mode enabled.",
+      "evidence": "Observed web session"
+    },
+    {
+      "id": "preview",
+      "title": "Inspect the generated webpage",
+      "timestampSeconds": 165,
+      "frame": "frame-165.jpg",
+      "caption": "The local page shows 'Meet Mona!' and a purple Octocat on a starry background.",
+      "instruction": "Switch to the local webpage tab and inspect the displayed result. Check animation and click effects manually before accepting the output.",
+      "expected": "The generated page displays Mona on a dark background with stars.",
+      "caution": "The screenshot confirms the visible design, but cannot prove animation timing or successful click behavior.",
+      "evidence": "Observed page"
+    },
+    {
+      "id": "followup",
+      "title": "Continue the conversation",
+      "timestampSeconds": 174,
+      "frame": "frame-174.jpg",
+      "caption": "A follow-up question and assistant response are visible in the connected web conversation.",
+      "instruction": "Use the web conversation for follow-up questions. The recording asks whether the session can also be accessed through GitHub Mobile.",
+      "expected": "The web interface displays the submitted question and an assistant response.",
+      "caution": "Mobile access is described by the assistant but not demonstrated. Validate supported versions and policies separately; do not mark mobile access as tested.",
+      "evidence": "Observed web exchange; mobile claim unverified"
+    }
+  ],
+  "reviewChecklist": [
+    "Confirm prerequisites, permissions, and commands against the target environment.",
+    "Compare this draft against the full video and any narration; add missed transitions.",
+    "Verify the generated page, animations, and interactions.",
+    "Validate remote-access policy and any mobile-support claims.",
+    "Redact screenshots as needed and obtain process-owner approval."
+  ]
+}
